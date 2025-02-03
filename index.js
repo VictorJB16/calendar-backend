@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 require('dotenv').config();
 const { dbConection } = require('./database/config');
 // en express si se necesita el dotenv para las variables de entorno
@@ -11,7 +12,9 @@ const app = express();
 //!Base de datos
 dbConection();
 
+//!CORS
 
+app.use( cors() );
 
 //!Directorio Publico
 // el use en node es como un middleware 
