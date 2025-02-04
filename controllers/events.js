@@ -1,10 +1,12 @@
 
 
 const crearEvent = (req,res) => {
+    //verificar que tenga el evento 
+    console.log(req.body);
 
     res.json({
         ok: true,
-        msg: 'Evento creado'
+        msg: 'crearEvent'
     });
 
 }
